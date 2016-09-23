@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/libs/Facebook/autoload.php';
-require_once __DIR__ . 'app_config.php';
+// require_once __DIR__ . 'app_config.php';
 
 $fb = new Facebook\Facebook([
   'app_id' => 'APP_ID',
