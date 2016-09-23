@@ -9,7 +9,7 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => 'v2.7',
   ]);
 
-$helper = $fb->getRedirectLoginHelper();
+// $helper = $fb->getRedirectLoginHelper();
 
 try {
     echo " nothing went wrong";
