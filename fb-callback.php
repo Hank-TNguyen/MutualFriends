@@ -12,6 +12,9 @@ $fb = new Facebook\Facebook([
 // $helper = $fb->getRedirectLoginHelper();
 
 
-echo 'Logged in as ';
+ $response = $fb->get('/me?fields=id,name',);
+
+ $user =  $response->getGraphUser();
+ echo "Logged in as " . $user['name'];
 
 ?>
