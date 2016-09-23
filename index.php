@@ -4,9 +4,9 @@ require_once __DIR__ . '/libs/Facebook/autoload.php';
 require_once __DIR__ . 'app_config.php';
 
 $fb = new Facebook\Facebook([
-  'app_id' => APP_ID,
-  'app_secret' => APP_SECRET,
-  'default_graph_version' => 'v5.0',
+  'app_id' => 'APP_ID',
+  'app_secret' => 'APP_SECRET',
+  'default_graph_version' => 'v2.4',
   ]);
 
 $helper = $fb->getRedirectLoginHelper();
