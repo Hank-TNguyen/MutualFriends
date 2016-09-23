@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . '/libs/Facebook/autoload.php';
+require_once __DIR__ . '/app_config.php';
+
 $fb = new Facebook\Facebook([
   'app_id' => '{app-id}', // Replace {app-id} with your app id
   'app_secret' => '{app-secret}',
