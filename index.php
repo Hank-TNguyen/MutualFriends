@@ -83,3 +83,4 @@ if (isset($accessToken)) {
 
 <?php
 echo APP_ID;
+?>
