@@ -12,7 +12,8 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 
 try {
-  $accessToken = $helper->getAccessToken();
+    echo " nothing went wrong";
+  // $accessToken = $helper->getAccessToken();
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
   echo 'Graph returned an error: ' . $e->getMessage();
@@ -34,5 +35,5 @@ try {
 //   exit;
 // }
 
-echo " nothing went wrong"
+echo " nothing went wrong";
 ?>
