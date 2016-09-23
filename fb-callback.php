@@ -13,6 +13,10 @@ try{
     $helper = $fb->getRedirectLoginHelper();
 } catch(Exceptions $e) {
     echo $e->getMessage();
+    exit;
+} catch(ErrorException $e) {
+    echo $e->getMessage();
+    exit;
 }
 
 try {
