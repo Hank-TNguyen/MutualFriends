@@ -9,11 +9,14 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => 'v2.7',
   ]);
 
-// $helper = $fb->getRedirectLoginHelper();
+try{
+    $helper = $fb->getRedirectLoginHelper();
+} catch(Exceptions $e) {
+    echo $e->getMessage();
+}
 
 try {
-    echo " nothing went wrong";
-  // $accessToken = $helper->getAccessToken();
+  $accessToken = $helper->getAccessToken();
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
   echo 'Graph returned an error: ' . $e->getMessage();
