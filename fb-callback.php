@@ -67,5 +67,4 @@ if (! $accessToken->isLongLived()) {
 
 $_SESSION['fb_access_token'] = (string) $accessToken;
 
-header('Location: http://mutualfriends.azurewebsites.com/test.php');
-?>
+echo "Congrats";
