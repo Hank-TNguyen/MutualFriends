@@ -71,3 +71,5 @@ if (! $accessToken->isLongLived()) {
 $_SESSION['fb_access_token'] = (string) $accessToken;
 
 echo "Congrats";
+
+?>
