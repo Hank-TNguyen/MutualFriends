@@ -9,17 +9,23 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => 'v2.7',
   ]);
 
-// $helper = $fb->getRedirectLoginHelper();
+$helper = $fb->getRedirectLoginHelper();
 
+try {
+  $accessToken = $helper->getAccessToken();
+} catch(Facebook\Exceptions\FacebookResponseException $e) {
+  // When Graph returns an error
+  echo 'Graph returned an error: ' . $e->getMessage();
+  exit;
+} catch(Facebook\Exceptions\FacebookSDKException $e) {
+  // When validation fails or other local issues
+  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  exit;
+}
 
- // $response = $fb->get('/me?fields=id,name',);
- //
- // $user =  $response->getGraphUser();
- // echo "Logged in as " . $user['name'];
-
- try {
+try {
   // Returns a `Facebook\FacebookResponse` object
-  $response = $fb->get('/me?fields=id,name');
+  $response = $fb->get('/me?fields=id,name', $accessToken);
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   echo 'Graph returned an error: ' . $e->getMessage();
   exit;
