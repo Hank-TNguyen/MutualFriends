@@ -1,0 +1,4 @@
+<?php
+    define(APP_ID, 1792359664345816);
+    define(APP_SECRET, 267657b40e346798b6ac7a973434e2c7);
+ ?>
