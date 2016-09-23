@@ -3,6 +3,9 @@ session_start();
 require_once __DIR__ . '/libs/Facebook/autoload.php';
 // require_once __DIR__ . 'app_config.php';
 
+define(APP_ID, 1792359664345816);
+define(APP_SECRET, 267657b40e346798b6ac7a973434e2c7);
+
 $fb = new Facebook\Facebook([
   'app_id' => 'APP_ID',
   'app_secret' => 'APP_SECRET',
