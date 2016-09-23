@@ -10,12 +10,15 @@ $fb = new Facebook\Facebook([
   ]);
 
 try{
-    // $helper = $fb->getRedirectLoginHelper();
+    $helper = $fb->getRedirectLoginHelper();
     echo EEE;
 } catch(Exceptions $e) {
     echo $e->getMessage();
     exit;
 } catch(ErrorException $e) {
+    echo $e->getMessage();
+    exit;
+} catch(Facebook\Exceptions\FacebookOtherException $e){
     echo $e->getMessage();
     exit;
 }
